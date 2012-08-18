@@ -1,0 +1,27 @@
+{
+  "name": "position:awesome",
+  "version": "0.1",
+  "description": "Chrome extension to move absolutely positioned elements in order to quicken prototyping.",
+  "background_page": "pa-bg.html",
+  "browser_action": {
+    // Icon removed to show just plain text badge.
+    "default_icon": "icon.png",
+    "popup": "pa-pop.html"
+  },
+  "permissions": [
+    //"http://api.flickr.com/"
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  //"content_security_policy": "default-src 'none'; script-src 'self'",
+  "content_scripts": [
+    {
+      "js": [
+        "js/jquery-1.8.0.min.js",
+        "pa_get.js"
+      ],
+      "matches": ["http://*/*","https://*/*"]
+    }
+  ]
+}

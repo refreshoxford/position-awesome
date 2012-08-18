@@ -1,0 +1,8 @@
+.move {
+    display: block;
+    height: 50px;
+    width: 300px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+}
