@@ -3,6 +3,9 @@ position-awesome
 
 Chrome extension to move absolutely positioned elements in order to quicken prototyping.
 
+# Change of action
+This will now look to being a Chrome Developer Tools Extension, since we want to deal with the inspector directly.
+
 ## Actions
 - Select element in Chrome inspector
 - Click **position-awesome** extension button
