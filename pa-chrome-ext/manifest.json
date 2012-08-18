@@ -1,0 +1,7 @@
+{
+  "name": "Position:Awesome",
+  "version": "0.1",
+  "description": "Chrome extension to move absolutely positioned elements in order to quicken prototyping.",
+  "devtools_page": "devtools.html",
+  "manifest_version": 2
+}

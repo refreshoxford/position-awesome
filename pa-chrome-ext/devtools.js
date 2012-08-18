@@ -12,10 +12,10 @@ var page_getProperties = function() {
   for (var i = 0; i < props.length; ++i)
     copy[props[i]] = data[props[i]];
   return copy;
-}
+};
 
 chrome.devtools.panels.elements.createSidebarPane(
-    "jQuery Properties",
+    "Position:Awesome",
     function(sidebar) {
   function updateElementProperties() {
     sidebar.setExpression("(" + page_getProperties.toString() + ")()");
