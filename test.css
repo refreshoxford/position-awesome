@@ -1,18 +1,92 @@
+html {
+    /*box-shadow: inset 0 0 10px 5px #A73;*/
+}
 body {
-    width: 700px;
+    width: 960px;
     margin: 0 auto;
+    background-color: #fa5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+#title {
+    text-align: center;
+}
+.small {
+    font-size: 10px;
 }
 #sortable {
     display: none;
 }
 #mover {
-    
+    text-align: center;
+    background-color: #acf;
+    padding: 50px;
+    box-shadow: inset 0 0 20px 5px #478BB8;
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid #94683D;
 }
 .move {
     display: block;
-    height: 50px;
-    width: 300px;
+    /*height: 50px;*/
+    padding: 30px 50px;
     /*position: absolute;*/
     top: 0;
     left: 0;
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #333;
+    width: 400px;
+    border: 2px solid transparent;
+}
+.move:hover, .hasmoved, .ui-sortable-helper {
+    background-color: #ccc;
+    /*color: #525252;*/
+    border-color: #525252;
+}
+.move.ui-sortable-helper {
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.5);
+}
+.hasmoved {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Dynamic text for the different states. */
+/*Page load*/
+.move .off {
+    display: inline;
+}
+.move .hover,
+.move .moving,
+.move .moved {
+    display: none;
+}
+/*Hover on*/
+.move:hover .hover {
+    display: inline;/*This is a span*/
+}
+.move:hover .moving,
+.move:hover .off,
+.move:hover .moved {
+    display: none;
+}
+/*Element has been moved*/
+.move.hasmoved .moved {
+    display: inline;
+}
+.move.hasmoved .hover,
+.move.hasmoved .moving,
+.move.hasmoved .off,
+.move.hasmoved.ui-sortable-helper .moved {
+    display: none;
+}
+/*Dragging*/
+.move.ui-sortable-helper .moving {
+    display: inline;
+}
+.move.ui-sortable-helper .hover,
+.move.ui-sortable-helper .off,
+.move.ui-sortable-helper .moved {
+    display: none;
 }
